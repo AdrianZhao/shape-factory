@@ -50,7 +50,7 @@ function setColor(div) {
 }
 function addDiv() {
   const divs = document.createElement("div");
-  divs.classList.add( "DivBox" );
+  divs.classList.add("DivBox");
   divs.id = number;
   divs.shape = shape.value; 
   divs.color = color.value; 
