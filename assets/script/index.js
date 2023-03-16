@@ -54,7 +54,6 @@ function addDiv() {
   divs.id = number;
   divs.shape = shape.value; 
   divs.color = color.value; 
-  // divs.value = shape.value + ' ' + color.value;
   setShape(divs);
   setColor(divs);
   generate.appendChild(divs); 
