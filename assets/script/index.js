@@ -27,7 +27,7 @@ const button = document.querySelector('button');
 const generate = document.querySelector('.generate');
 
 function setShape(div) {
-  let temp = shape.value;
+  let temp = div.shape;
   if (temp == 'Circle') {
     div.style.borderRadius = '50%';
   } else {
@@ -35,7 +35,7 @@ function setShape(div) {
   }
 }
 function setColor(div) {
-  let temp = color.value;
+  let temp = div.color;
   if (temp == 'Blue') {
     div.style.backgroundColor = '#09f';
   } else if (temp == 'Green') {
@@ -52,12 +52,14 @@ function addDiv() {
   const divs = document.createElement("div");
   divs.classList.add( "DivBox" );
   divs.id = number;
-  divs.value = shape.value + ' ' + color.value;
+  divs.shape = shape.value; 
+  divs.color = color.value; 
+  // divs.value = shape.value + ' ' + color.value;
   setShape(divs);
   setColor(divs);
   generate.appendChild(divs); 
   divs.addEventListener('click', () => {
-    message.innerText = 'Unit ' + divs.id + ' ' + divs.value;
+    message.innerText = 'Unit ' + divs.id + ' ' + divs.shape + ' ' + divs.color;
   })
 }
 let number = 0;
