@@ -26,17 +26,8 @@ const message = document.querySelector('.message');
 const button = document.querySelector('button');
 const generate = document.querySelector('.generate');
 
-function getShape() {
-  return shape.value;
-}
-function getColor() {
-  return color.value;
-}
-function getInformation() {
-  return `${div.value}`;
-}
 function setShape(div) {
-  let temp = getShape();
+  let temp = shape.value;
   if (temp == 'Circle') {
     div.style.borderRadius = '50%';
   } else {
@@ -44,7 +35,7 @@ function setShape(div) {
   }
 }
 function setColor(div) {
-  let temp = getColor();
+  let temp = color.value;
   if (temp == 'Blue') {
     div.style.backgroundColor = '#09f';
   } else if (temp == 'Green') {
@@ -59,8 +50,9 @@ function setColor(div) {
 }
 function addDiv() {
   const divs = document.createElement("div");
+  divs.classList.add( "DivBox" );
   divs.id = number;
-  divs.value = getShape() + ' ' + getColor();
+  divs.value = shape.value + ' ' + color.value;
   setShape(divs);
   setColor(divs);
   generate.appendChild(divs); 
