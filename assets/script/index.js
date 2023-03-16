@@ -71,4 +71,3 @@ button.addEventListener('click', () => {
     message.innerText = `The Box is Full!`;
   }
 })
-
